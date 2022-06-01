@@ -1,0 +1,27 @@
+{   
+    "word": "Diego",
+    "total": 3,
+    "students": [
+        {
+            "name": "Diego Ribas",
+            "email": "dribas@flamengo.com",
+            "age": 37,
+            "weight": 75,
+            "feet_tall": 1.73
+        },
+        {
+            "name": "Diego Alves",
+            "email": "dalves@flamengo.com",
+            "age": 36,
+            "weight": 85,
+            "feet_tall": 1.88
+        },
+        {
+            "name": "Diego Costa",
+            "email": "dcosta@flamengo.com",
+            "age": 33,
+            "weight": 80,
+            "feet_tall": 1.88
+        }
+    ]
+}

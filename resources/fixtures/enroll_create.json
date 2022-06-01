@@ -1,0 +1,16 @@
+{
+    "student":{
+        "name": "Filipe Luís",
+        "email": "fluis@flamengo.com",
+        "age": 36,
+        "weight": 74,
+        "feet_tall": 1.82
+    },
+    
+    "plan":{
+        "title": "Plano Fit",
+        "duration": 6,
+        "price": 29.99
+    },
+    "days": 182
+}

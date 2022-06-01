@@ -1,0 +1,16 @@
+{
+    "student":{
+        "name": "De Arrascaeta",
+        "email": "arrasca@flamengo.com",
+        "age": 27,
+        "weight": 73,
+        "feet_tall": 1.72
+    },
+    
+    "plan":{
+        "title": "Plano Black",
+        "duration": 12,
+        "price": 19.99
+    },
+    "days": 365
+}
