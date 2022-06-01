@@ -48,21 +48,21 @@ jobs:
             robot -d ./logs tests
 
     - name: Tests 🚨
-        if: ${{ failure() }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: android
-          number: ${{ github.event.workflow_run.pull_requests[0].number }}
-          message: |
-            Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
-            Some Android E2E test failed [Click here to see what went wrong](https://customer-test-logs.s3.us-west-2.amazonaws.com/courier-customer-native/${{ github.run_number }}/Androidresults/log.html)
+      if: ${{ failure() }}
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        header: android
+        number: ${{ github.event.workflow_run.pull_requests[0].number }}
+        message: |
+          Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
+          Some Android E2E test failed [Click here to see what went wrong](https://customer-test-logs.s3.us-west-2.amazonaws.com/courier-customer-native/${{ github.run_number }}/Androidresults/log.html)
 
     - name: Tests ✅
-        if: ${{ success() }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: android
-          number: ${{ github.event.workflow_run.pull_requests[0].number }}
-          message: |
-            Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
-            All Android E2E tests [passed](https://customer-test-logs.s3.us-west-2.amazonaws.com/courier-customer-native/${{ github.run_number }}/Androidresults/log.html), you're good to go!
+      if: ${{ success() }}
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        header: android
+        number: ${{ github.event.workflow_run.pull_requests[0].number }}
+        message: |
+          Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
+          All Android E2E tests [passed](https://customer-test-logs.s3.us-west-2.amazonaws.com/courier-customer-native/${{ github.run_number }}/Androidresults/log.html), you're good to go!
