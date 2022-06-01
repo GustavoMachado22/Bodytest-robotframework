@@ -6,10 +6,6 @@ on:
   push:
     branches: [ master ]
 
-  workflow_run:
-    workflows: ['Development - Build Android']
-    types: [ completed ]
-
 jobs:
   run_automation:
     runs-on: ubuntu-latest
