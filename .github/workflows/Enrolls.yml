@@ -1,0 +1,38 @@
+
+name: 'Development - e2e'
+
+on: [workflow_dispatch]
+
+jobs:
+  run_automation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install Dependecies
+      env:
+        PYTHON_VERSION: "3.10"
+      run: |
+        py_version=$PYTHON_VERSION
+        sudo apt update
+        sudo apt install software-properties-common
+        sudo add-apt-repository -y ppa:deadsnakes/ppa
+        sudo apt update
+        sudo apt install python"$py_version"
+        sudo apt-get install -y nodejs
+
+    - name: Verify Version
+      run: |
+          python --version
+          nodejs -v
+          npm --version
+          aws --version
+
+    - name: Install libraries for robot
+      run: |
+          pip install -U pip
+          pip install -r requirements.txt
+          python -m Browser.entry init
+
+    - name: Run Tests
+      run: |
+            TYPE=headless BROWSER=chromium robot -d ./results tests/
