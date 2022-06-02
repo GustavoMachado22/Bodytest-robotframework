@@ -1,5 +1,5 @@
 
-name: Enrolls
+name: 'Development - e2e'
 
 on: [workflow_dispatch]
 
@@ -35,5 +35,4 @@ jobs:
 
     - name: Run Tests
       run: |
-            mkdir results
-            robot -d ./logs tests/enrollments
+            TYPE=headless BROWSER=chromium robot -d ./results tests/
