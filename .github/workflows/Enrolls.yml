@@ -1,5 +1,5 @@
 
-name: 'Development - e2e'
+name: Enrolls
 
 on: [workflow_dispatch]
 
