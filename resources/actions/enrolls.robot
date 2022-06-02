@@ -20,7 +20,6 @@ Submit Enrolls Form
 
 ## Links & Buttons
 Go To Form Enrolls
-    Set Strict Mode            false
     Click                      css=a[href$="matriculas/new"]
     Wait For Elements State    css=h1 >> text=Nova matrícula    visible    5
 

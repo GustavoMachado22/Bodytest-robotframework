@@ -37,7 +37,6 @@ Search Student By Name
 
 ## Links & Buttons
 Go To Form Students
-    Set Strict Mode             false
     Click                      css=a[href$="alunos/new"]
     Wait For Elements State    css=h1 >> text=Novo aluno    visible    5
 
