@@ -35,5 +35,4 @@ jobs:
 
     - name: Run Tests
       run: |
-           robot -d ./results tests/  
-	        
+           robot -d ./results tests/
