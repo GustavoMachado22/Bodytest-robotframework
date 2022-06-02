@@ -35,4 +35,4 @@ jobs:
 
     - name: Run Tests
       run: |
-           robot -d ./results tests/
+           TYPE=headless BROWSER=${BROWSER} robot -d ./results tests/
