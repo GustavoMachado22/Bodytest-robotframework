@@ -2,8 +2,7 @@
 Documentation    Cadastro de planos
 
 Resource       ${EXECDIR}/resources/base.robot
-Suite Setup    Start Admin Session
-
+Suite Setup    Start Admin Session      ${TYPE}    ${BROWSER}   
 
 *** Test Cases ***
 Calcular preço total do plano

@@ -2,8 +2,7 @@
 Documentation    Gestão de Matrículas
 
 Resource       ${EXECDIR}/resources/base.robot
-Suite Setup    Start Admin Session
-
+Suite Setup    Start Admin Session      ${TYPE}     ${BROWSER}
 
 *** Test Cases ***
 Deve exibir data inicial e final conforme o plano escolhido

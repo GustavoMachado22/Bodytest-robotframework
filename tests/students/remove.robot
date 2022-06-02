@@ -2,7 +2,7 @@
 Documentation    Remover Alunos
 
 Resource       ${EXECDIR}/resources/base.robot
-Test Setup     Start Admin Session
+Suite Setup      Start Admin Session      ${TYPE}    ${BROWSER}  
 
 *** Test Cases ***
 Remover aluno cadastrado
@@ -20,6 +20,7 @@ Remover aluno cadastrado
 Desistir da exclusão
     &{student}    Create Dictionary    name=David Luiz    email=david.luiz@flamengo.com    age=35    weight=86    feet_tall=1.89   
 
+    Remove Student By Name          ${student.name}
     Insert Student                  ${student} 
     Go To Students
     Search Student By Name          ${student.name}

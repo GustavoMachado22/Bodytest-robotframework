@@ -2,8 +2,7 @@
 Documentation       Suite de testes de Login do Administrador
 
 Resource           ${EXECDIR}/resources/base.robot
-
-Suite Setup        Start Browser Session
+Suite Setup        Start Browser Session        ${TYPE}    ${BROWSER}  
 
 ***Test Cases***
 Login Administrador

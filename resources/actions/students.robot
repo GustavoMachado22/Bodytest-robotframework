@@ -37,8 +37,8 @@ Search Student By Name
 
 ## Links & Buttons
 Go To Form Students
-    #Click                      css=a[href$="alunos/new"]
-    Click                      xpath=//span[text()="Cadastrar"]/../..
+    Click                      css=a[href$="alunos/new"]
+    # Click                      xpath=//span[text()="Cadastrar"]/../..
     Wait For Elements State    css=h1 >> text=Novo aluno    visible    5
 
 Request Removal By Email

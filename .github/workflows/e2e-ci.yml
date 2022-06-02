@@ -35,5 +35,5 @@ jobs:
 
     - name: Run Tests
       run: |
-            mkdir results
-            robot -d ./logs tests
+           	TYPE=headless BROWSER=${BROWSER} robot -d ./results tests/  
+	          Open results/tests/log.html

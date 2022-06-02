@@ -12,22 +12,25 @@ Resource    actions/nav.robot
 Resource    actions/plans.robot
 Resource    actions/students.robot
 
-
-# abre o código que ta falhando
+*** Variables ***
+${TYPE}         %{TYPE}
+${BROWSER}      %{BROWSER}
 
 *** Keywords ***
 Start Browser Session
-    New Browser     chromium    true
+    [Arguments]     ${env}=headless     ${browser}=chromium
+    run keyword if  '${env}'=='headless'  New Browser     ${BROWSER}      true
+    ...  ELSE IF    '${env}'=='local'     New Browser     ${BROWSER}      false
     New Page        about:blank
 
 Start Admin Session
-    Start Browser Session
+    [Arguments]     ${TYPE}     ${BROWSER}
+    Start Browser Session       ${TYPE}     ${BROWSER}       
     Go To Login Page
     Login With                  admin@bodytest.com    pwd123
     User Should Be Logged In    Administrador
 
 ### Helpers
-
 Get JSON 
     [Arguments]     ${file_name}
     ${file}=            Get File        ${EXECDIR}/resources/fixtures/${file_name}

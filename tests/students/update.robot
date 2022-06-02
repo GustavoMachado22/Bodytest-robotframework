@@ -2,8 +2,7 @@
 Documentation    Atualizar Alunos
 
 Resource       ${EXECDIR}/resources/base.robot
-Suite Setup    Start Admin Session
-
+Suite Setup    Start Admin Session      ${TYPE}    ${BROWSER}   
 
 *** Test Cases ***
 Atualizar um aluno já cadastrado
