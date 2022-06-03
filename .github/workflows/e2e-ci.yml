@@ -56,4 +56,12 @@ jobs:
       with:
         header: BodyTest E2E
         message: |
-            All BodyTest E2E tests [passed](${{ env.RESULT_LOG }}), you're good to go!
+            All BodyTest E2E tests passed, you're good to go!
+
+    - name: Tests 🚨
+      if: ${{ failure() }}
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        header: BodyTest E2E
+        message: |
+            There was a problem in the BodyTest E2E tests! Click here to see what went wrong:(${{ env.RESULT_LOG }})
