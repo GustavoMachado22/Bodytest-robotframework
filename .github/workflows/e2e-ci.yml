@@ -43,6 +43,7 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        GIT_HASH: $git_hash
       run: |
             git_hash=$(git rev-parse --short "$GITHUB_SHA")
             echo $git_hash
@@ -52,9 +53,7 @@ jobs:
 
     - name: Tests ✅
       if: ${{ success() }}
-      run: |
-            git_hash=$(git rev-parse --short "$GITHUB_SHA")
-            echo $git_hash
-      header: BodyTest
-      message: |
+      with:
+        header: BodyTest
+        message: |
             All BodyTest E2E tests [passed](https://bodytest.s3.amazonaws.com/"$git_hash"/log.html), you're good to go!
