@@ -50,8 +50,9 @@ jobs:
             aws s3 cp ${PWD}/results s3://"$bucket"/"$git_hash"/ --recursive --region us-east-1
             echo "Log: https://bodytest.s3.amazonaws.com/$git_hash/log.html"
 
-    - name: Tests ✅     
+    - name: Tests ✅
       if: ${{ success() }}
       with:
+        header: BodyTest
         message: |
             All BodyTest E2E tests passed, you're good to go!
