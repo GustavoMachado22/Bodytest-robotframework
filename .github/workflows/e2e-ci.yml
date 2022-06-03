@@ -52,8 +52,8 @@ jobs:
 
     - name: Tests ✅
       if: ${{ success() }}
-      env:
-        RESULT_LOG: ${{ env.RESULT_LOG }}
+      # env:
+      #   RESULT_LOG: ${{ env.RESULT_LOG }}
       uses: marocchino/sticky-pull-request-comment@v2
       with:
         header: BodyTest E2E
