@@ -52,6 +52,7 @@ jobs:
 
     - name: Tests ✅
       if: ${{ success() }}
+      uses: marocchino/sticky-pull-request-comment@v2
       with:
         header: BodyTest
         message: |
