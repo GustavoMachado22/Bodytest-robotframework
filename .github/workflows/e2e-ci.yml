@@ -13,6 +13,8 @@ jobs:
         PYTHON_VERSION: "3.10"
       run: |
         py_version=$PYTHON_VERSION
+        sudo apt install software-properties-common
+        sudo apt update
         sudo apt install python"$py_version"
         sudo apt-get install -y nodejs
 
