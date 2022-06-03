@@ -1,5 +1,5 @@
 
-name: CI
+name: ReleaseCI
 
 on: [push]
 
@@ -36,3 +36,14 @@ jobs:
     - name: Run Tests
       run: |
            TYPE=headless BROWSER=chromium robot -d ./results tests/
+
+    - name: Upload logs in Bucket S3 AWS
+      if: ${{ always() }}
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+            git_hash=$(git rev-parse --short "$GITHUB_SHA")
+            echo $git_hash
+            bucket=bodytest
+            aws s3 cp ${PWD}/result s3://"$bucket"/"$git_hash"/ --recursive --region us-east-1
