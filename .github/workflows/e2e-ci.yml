@@ -34,7 +34,6 @@ jobs:
           python -m Browser.entry init
 
     - name: Run Tests
-      env:
       run: |
            mkdir results
            TYPE=headless BROWSER=chromium robot -d ./results tests/
