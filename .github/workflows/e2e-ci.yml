@@ -35,7 +35,7 @@ jobs:
 
     - name: Run Tests
       run: |
-           mkdir results
+           mkdir result
            TYPE=headless BROWSER=chromium robot -d ./results tests/
 
     - name: Upload logs in Bucket S3 AWS
