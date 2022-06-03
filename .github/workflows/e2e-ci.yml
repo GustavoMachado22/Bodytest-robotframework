@@ -50,11 +50,11 @@ jobs:
             aws s3 cp ${PWD}/results s3://"$bucket"/"$git_hash"/ --recursive --region us-east-1
             echo "Log: https://bodytest.s3.amazonaws.com/$git_hash/log.html"
             
-    # - name: Tests ✅
-    #   if: ${{ success() }}
-    #   with:
-    #     header: BodyTest
-    #     number: ${{ github.event.workflow_run.pull_requests[0].number }}
-    #     message: |
-    #         Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
-    #         All BodyTest E2E tests [passed](https://bodytest.s3.amazonaws.com/"$git_hash"/log.html), you're good to go!
+    - name: Tests ✅
+      if: ${{ success() }}
+      with:
+        header: BodyTest
+        number: ${{ github.event.workflow_run.pull_requests[0].number }}
+        message: |
+            Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
+            All BodyTest E2E tests [passed](https://bodytest.s3.amazonaws.com/"$git_hash"/log.html), you're good to go!
