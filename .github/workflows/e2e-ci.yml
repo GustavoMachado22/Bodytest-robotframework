@@ -6,7 +6,8 @@ on: [push]
 jobs:
   run_automation:
     runs-on: ubuntu-latest
-    steps:
+
+  steps:
     - uses: actions/checkout@v3
     - name: Install Dependecies
       env:
@@ -34,6 +35,8 @@ jobs:
           python -m Browser.entry init
 
     - name: Run Tests
+      env:
+      RUN_NUMBER: ${{ github.run_number }}
       run: |
            mkdir results
            TYPE=headless BROWSER=chromium robot -d ./results tests/
@@ -44,8 +47,6 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-            git_hash=$(git rev-parse --short "$GITHUB_SHA")
-            echo $git_hash
             bucket=bodytest
             aws s3 cp ${PWD}/results s3://"$bucket"/"${{ github.run_number }}"/ --recursive --region us-east-1
             echo "Log: https://bodytest.s3.amazonaws.com/${{ github.run_number }}/log.html"
