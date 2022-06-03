@@ -52,9 +52,8 @@ jobs:
             
     - name: Tests ✅
       if: ${{ success() }}
+      uses: marocchino/sticky-pull-request-comment@v2
       with:
         header: BodyTest
-        number: ${{ github.event.workflow_run.pull_requests[0].number }}
         message: |
-            Release ${{ github.sha }} to <${{ github.event.repository.html_url }}/pull/${{ github.event.workflow_run.pull_requests[0].number }}>
             All BodyTest E2E tests [passed](https://bodytest.s3.amazonaws.com/"$git_hash"/log.html), you're good to go!
