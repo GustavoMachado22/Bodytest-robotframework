@@ -48,12 +48,14 @@ jobs:
             echo $git_hash
             bucket=bodytest
             aws s3 cp ${PWD}/results s3://"$bucket"/"$git_hash"/ --recursive --region us-east-1
-            echo "Log: https://bodytest.s3.amazonaws.com/$git_hash/log.html"
+            echo "RESULT_LOG=https://bodytest.s3.amazonaws.com/$git_hash/log.html" >> $GITHUB_ENV
 
     - name: Tests ✅
       if: ${{ success() }}
+      env:
+        RESULT_LOG: ${{ env.RESULT_LOG }}
       uses: marocchino/sticky-pull-request-comment@v2
       with:
-        header: BodyTest
+        header: BodyTest E2E
         message: |
-            All BodyTest E2E tests passed, you're good to go!
+            All BodyTest E2E tests [passed](${{ env.RESULT_LOG }}), you're good to go!
