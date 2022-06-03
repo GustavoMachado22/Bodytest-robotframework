@@ -55,7 +55,6 @@ jobs:
       run: |
             git_hash=$(git rev-parse --short "$GITHUB_SHA")
             echo $git_hash
-      with:
-        header: BodyTest
-        message: |
+      header: BodyTest
+      message: |
             All BodyTest E2E tests [passed](https://bodytest.s3.amazonaws.com/"$git_hash"/log.html), you're good to go!
