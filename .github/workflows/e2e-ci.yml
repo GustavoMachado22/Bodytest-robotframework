@@ -53,7 +53,7 @@ jobs:
     - name: Tests ✅
       if: ${{ success() }}
       with:
-        run: |
+      run: |
             git_hash=$(git rev-parse --short "$GITHUB_SHA")
             echo $git_hash
         header: BodyTest
