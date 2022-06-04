@@ -8,29 +8,30 @@ Desafio do Ninja é um desafio proposto pela QA Ninja Academy, onde devemos cria
 de maneira eficiente e organizada.
 
 <h1 align="center">
-Explicacao sobre a estrutura do projeto
+Estrutura do projeto
 </h1>
+
 O projeto foi desenvolvido com `Robot Framework`, utilizando o framework `Playwright` integrado através da library `Browser`,
 criando testes de aceitação que simulam o comportamento do usuário final.
 
-#### Estrutura do Projeto
+#### Organização do Projeto
 ```ruby
     ├── .github                   
-        ├── gitflows                            # Arquivos do `Github Actions` para executar o `CI`.
-    ├── deploys                                 # Diretório para armazenar os arquivos da aplicação. 
+        ├── gitflows        # Arquivos do Github Actions para executar o CI.
+    ├── deploys             # Diretório para armazenar os arquivos da aplicação. 
     ├── resource
-        ├── actions                             # Diretório com as classes .robot que executa as `keywords`. 
-        ├── fixtures                            # Diretório para armazenar massa de dados em `json`.
-        ├── libs                                # Library com classes .py que executa as `keywords` de chamada no banco. 
-        ├── base                                # Arquivos de definições do robot.
-    ├── test_env                                # Diretório para armazernar os recursos da library
-    ├── test                                    # Diretório para armazernar os cenários de testes   
-        ├── enrollments                         # Suite de teste para os cenários de matrículas
-        ├── login                               # Suite de teste para os cenários de login do administrador 
-        ├── plans                               # Suite de teste para os cenários de planos      
-        ├── students                            # Suite de teste para os cenários de alunos
-    ├── Makefile                                # Arquivos de definições para executar os testes.
-    └── README.md                               # Documentação do projeto
+        ├── actions         # Diretório com as classes .robot que executa as keywords. 
+        ├── fixtures        # Diretório para armazenar massa de dados em json.
+        ├── libs            # Library com classes .py que executa as keywords de chamada no banco. 
+        ├── base            # Arquivos de definições do robot.
+    ├── test_env            # Diretório para armazernar os recursos da library
+    ├── test                # Diretório para armazernar os cenários de testes   
+        ├── enrollments     # Suite de teste para os cenários de matrículas
+        ├── login           # Suite de teste para os cenários de login do administrador 
+        ├── plans           # Suite de teste para os cenários de planos      
+        ├── students        # Suite de teste para os cenários de alunos
+    ├── Makefile            # Arquivos de definições para executar os testes.
+    └── README.md           # Documentação do projeto
 ```
     
 
@@ -42,7 +43,7 @@ Desta forma, conseguimos trabalhar, ao mesmo tempo, com foco no problema e na so
 ### Continuos Test
 Com `Github Actions` executamos uma `PIPE`, que executa nosso projeto de automação a cada `PUSH`.<br/> 
 Podendo ser executado também manualmente no menu de Actions!<br/> 
-O `CI` esta integrado com a `AWS` enviando os logs de resultado dos testes para armazenar em um Bucket S3!<br/> 
+O `CI` esta integrado com a `AWS` enviando os logs de resultado dos testes para armazenar em um `Bucket S3`.<br/> 
 
 <h1 align="center">
 Configurando o projeto 
@@ -50,7 +51,7 @@ Configurando o projeto
 
 ### Dependências para executar localmente
 
-- Ter uma IDE de sua preferência;
+- Ter uma IDE de sua preferência
 - Instalar a [Library Browser](https://github.com/MarketSquare/robotframework-browser)
 
 <h1 align="center">
@@ -65,20 +66,6 @@ git clone https://github.com/GustavoMachado22/Bodytest-robotframework.git
 ## Instruções de execução 
 Através do CMD dentro da pasta raiz do projeto execute:
 
-> Executar um teste editável
-Editar os campos no arquivo Makefile como desejado.
-```
-# Available: local and headless
-TYPE=local
-# Available: chromium, firefox and webkit
-BROWSER=chromium
-# Nome do cenário teste
-TEST_NAME=Login Administrador
-```
-
-``` ruby
-make test
-```
 > Executar em modo headless 
 ``` ruby
 make headless tests
@@ -87,6 +74,20 @@ make headless tests
 > Executar com navegador aberto
 ``` ruby
 make local e2e
+```
+
+> Executar um teste editável
+```
+Editar os campos no arquivo Makefile como desejado.
+# Available: local and headless
+TYPE=local
+# Available: chromium, firefox and webkit
+BROWSER=chromium
+# Nome do cenário teste
+TEST_NAME=Login Administrador
+```
+``` ruby
+make test
 ```
 
 > Executar cenários de matrículas [enrolls]
@@ -108,7 +109,6 @@ make plans
 ``` ruby
 make students
 ```
-
 
 ## Autor
 
