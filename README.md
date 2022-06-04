@@ -41,7 +41,7 @@ O uso do `Robot Framework` para automatizar testes de software torna o processo 
 Desta forma, conseguimos trabalhar, ao mesmo tempo, com foco no problema e na solução, construindo rapidamente código de excelente qualidade que resolve os problemas e é executado de forma estável.<br/> 
  
 ### Continuos Test
-Com `Github Actions` executamos uma `PIPE`, que executa nosso projeto de automação a cada `PUSH`.<br/> 
+Com `Github Actions` criamos uma `PIPE`, que executa nosso projeto de automação a cada `PUSH`.<br/> 
 Podendo ser executado também manualmente no menu de Actions!<br/> 
 O `CI` esta integrado com a `AWS` enviando os logs de resultado dos testes para armazenar em um `Bucket S3`.<br/> 
 
@@ -52,6 +52,11 @@ Configurando o projeto
 ### Dependências para executar localmente
 
 - Ter uma IDE de sua preferência
+- Instalar Python3:[Download](https://www.python.org/downloads/)
+- Instalar Robot Framework
+``` ruby
+pip install robotframework
+```
 - Instalar a [Library Browser](https://github.com/MarketSquare/robotframework-browser)
 
 <h1 align="center">
@@ -64,7 +69,7 @@ git clone https://github.com/GustavoMachado22/Bodytest-robotframework.git
 ```
 
 ## Instruções de execução 
-Através do CMD dentro da pasta raiz do projeto execute:
+Use os comandos listados abaixo no terminal, diretamente na pasta raiz:
 
 > Executar em modo headless 
 ``` ruby
