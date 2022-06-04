@@ -52,7 +52,7 @@ Configurando o projeto
 ### Dependências para executar localmente
 
 - Ter uma IDE de sua preferência
-- Instalar Python3 :[Download](https://www.python.org/downloads/)
+- Instalar Python3: [Download](https://www.python.org/downloads/)
 - Robot Framework
 > Instalar Robot Framework
 ``` ruby
