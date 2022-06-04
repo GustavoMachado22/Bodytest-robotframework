@@ -8,7 +8,7 @@ Suite Setup        Start Browser Session        ${TYPE}    ${BROWSER}
 Login Administrador
     [tags]      admin 
     Go To Login Page
-    Login With                      admin@bodytest.com    pwd12345
+    Login With                      admin@bodytest.com    pwd123
     User Should Be Logged In        Administrador
     [Teardown]  LocalStorage Clear 
 
