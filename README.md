@@ -132,5 +132,3 @@ make students
     </td>
   </tr>
 </table>
-
-
