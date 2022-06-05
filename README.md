@@ -121,14 +121,18 @@ make students
 Executando Github Actions
 </h1>
 
-![Github-Actions](https://user-images.githubusercontent.com/64233343/172061939-e2d5ee92-6da7-4f8c-b7fb-b1c43efe1896.gif)
+![Github-Actions](https://user-images.githubusercontent.com/64233343/172062250-5cb1aae7-c233-4658-b150-f5050ada00e8.gif)
 
+<h1 align="center">
+Enviando logs para o Bucket S3
+</h1>
+
+![Bucket-S3](https://user-images.githubusercontent.com/64233343/172062815-118330dc-2013-42fe-a31b-497f2f291fc3.gif)
 
 
 <h1 align="center">
 A little about me...  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="60">   
 </h1>
-
 
 ```
 A passionate developer, currently working as Software QA Engineer at Zé Delivery
