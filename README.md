@@ -34,6 +34,8 @@ criando testes de aceitação que simulam o comportamento do usuário final.
     └── README.md           # Documentação do projeto
 ```
     
+ ### Arquitetura do projeto   
+![bodytest](https://user-images.githubusercontent.com/64233343/172066490-fb36c60d-4e78-4c6d-bed4-50cd7c78b276.jpeg)
 
 ### Por quê utilizar o Robot Framework?
 Para otimizar o tempo, criar testes robustos e de aceitação que simulam o comportamento do usuário final.<br/> 
