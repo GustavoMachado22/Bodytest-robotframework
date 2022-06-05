@@ -118,6 +118,14 @@ make students
 
 
 <h1 align="center">
+Executando Github Actions
+</h1>
+
+![Github-Actions](https://user-images.githubusercontent.com/64233343/172061939-e2d5ee92-6da7-4f8c-b7fb-b1c43efe1896.gif)
+
+
+
+<h1 align="center">
 A little about me...  <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="60">   
 </h1>
 
