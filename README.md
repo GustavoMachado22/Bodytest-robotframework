@@ -138,7 +138,6 @@ A passionate developer, currently working as Software QA Engineer at Zé Deliver
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GustavoMachado22&layout=compact&langs_count=7&theme=dracula"/>
 
       
- 
 
  </div>
   
