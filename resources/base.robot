@@ -27,7 +27,7 @@ Start Admin Session
     [Arguments]     ${TYPE}     ${BROWSER}
     Start Browser Session       ${TYPE}     ${BROWSER}       
     Go To Login Page
-    Login With                  admin@bodytest.com    pwd456
+    Login With                  admin@bodytest.com    pwd123
     User Should Be Logged In    Administrador
 
 ### Helpers
