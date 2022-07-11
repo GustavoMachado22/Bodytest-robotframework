@@ -27,7 +27,7 @@ Start Admin Session
     [Arguments]     ${TYPE}     ${BROWSER}
     Start Browser Session       ${TYPE}     ${BROWSER}       
     Go To Login Page
-    Login With                  admin@bodytest.com    pwd123
+    Login With                  admin@bodytest.com    pwd456
     User Should Be Logged In    Administrador
 
 ### Helpers
@@ -36,3 +36,5 @@ Get JSON
     ${file}=            Get File        ${EXECDIR}/resources/fixtures/${file_name}
     ${json_object}      Evaluate        json.loads($file)       json
     [Return]        ${json_object} 
+
+  Start Browser Session   

@@ -1,0 +1,6 @@
+make: Entering directory `/Users/gustavomachado/Documents/Gustavo/Estudo/QA Ninja/RobotExpert/bodytest'
+TYPE=local BROWSER=chromium robot -N Local -d results/"Login Administrador" -t "Login Administrador" tests/
+Open results/"Login Administrador"/log.html
+ 
+make: Leaving directory `/Users/gustavomachado/Documents/Gustavo/Estudo/QA Ninja/RobotExpert/bodytest'
+ 
